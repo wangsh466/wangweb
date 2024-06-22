@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">     
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">     
+  <meta name="viewport" content="width=device-width, initial-scale=1">     
+       
+  <link href="css/bootstrap.min.css" rel="stylesheet">     
+  <!--[if lt IE 9]>       
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>       
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>     
+  <![endif]-->
+    <title></title>
+    <style type="text/css">
+#P1{
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index:-1;
+}
+#P2{
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index:0;
+}
+#P3{
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index:1;
+}
+#P4{
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index:1;
+}
+#P5{
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index:2;
+}
+#P6{
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index:3;
+}
+#PP{
+    position:absolute;
+    z-index:4;
+}
+</style>
+</head>
+<body>
+<nav class="nav navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> 
+                </button>
+                <a class="navbar-brand" href="#">
+                ZABWAY
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar"><!--底下放要縮放的內容-->
+                <ul class="nav navbar-nav">
+                    <li><a data-toggle="tab" href="#home" onclick="my3c();">顯示P1藍腳床</a></li>
+                    <li><a data-toggle="tab" href="#menu1" onclick="my4c();">顯示P2黑腳床</a></li>
+                </ul>
+<input type="button" value="顯示P1藍腳床" onclick="my3c();"/>
+<input type="button" value="顯示P2黑腳床" onclick="my4c();"/>
+<input type="button" value="顯示P3白LOGO" onclick="my1c();"/>
+<input type="button" value="顯示P4黑LOGO" onclick="my2c();"/>
+<input type="button" value="顯示第2層" onclick="my5c();"/>
+<input type="button" value="隱藏第2層" onclick="my6c();"/>
+<input type="button" value="顯示第3層" onclick="my5ca();"/>
+<input type="button" value="隱藏第3層" onclick="my6ca();"/>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Log in</a></li>
+                    <li><a href="#">Log out</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Admin</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<div class="container">  
+ <div class="row">   
+  <div class="col-md-6">    
+<div style="position:relative;">
+<img src="images/1024b.png" class="img-fluid" id="P1" alt="" width="100%" />
+<img src="images/1024d.png" class="img-fluid" id="P2" alt="" width="100%" style="display:none"/>
+<img src="images/1024c.png" class="img-fluid" id="P3" alt="" width="100%" style="display:none"/>
+<img src="images/1024e.png" class="img-fluid" id="P4" alt="" width="100%" style="display:none"/>
+<img src="images/logo.png" class="img-fluid" id="P5" alt="" width="100%" style="display:none"/>
+<img src="images/zablogo.png" class="img-fluid" id="P6" alt="" width="100%" style="display:none"/>
+</div>   
+  </div> 
+  
+  <div class="col-md-3">
+  
+  </div>
+    
+  <div class="col-md-3">
+  <div id="PP">  
+<input type="button" value="顯示P1藍腳床" onclick="my3c();"/>
+<input type="button" value="顯示P2黑腳床" onclick="my4c();"/>
+<input type="button" value="顯示P3白LOGO" onclick="my1c();"/>
+<input type="button" value="顯示P4黑LOGO" onclick="my2c();"/>
+<input type="button" value="顯示第2層" onclick="my5c();"/>
+<input type="button" value="隱藏第2層" onclick="my6c();"/>
+<input type="button" value="顯示第3層" onclick="my5ca();"/>
+<input type="button" value="隱藏第3層" onclick="my6ca();"/>
+  </div>   
+  </div>   
+  
+  
+
+ </div> 
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>     
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    function my1c() {
+        document.all.P3.style.display = "inline";
+        document.all.P4.style.display = "none";
+        //顯示白LOGO
+    }
+
+    function my2c() {
+        document.all.P4.style.display = "inline";
+        document.all.P3.style.display = "none";
+        //顯示黑LOGO
+    }
+
+    function my3c() {
+        document.all.P1.style.display = "inline";
+        document.all.P2.style.display = "none";
+        //顯示P1藍腳床
+    }
+
+    function my4c() {
+        document.all.P2.style.display = "inline";
+        document.all.P1.style.display = "none";
+        //顯示P2黑腳床
+    }
+
+    function my5c() {
+        document.all.P5.style.display = "inline";
+
+        //顯示第2層
+    }
+
+    function my6c() {
+        document.all.P5.style.display = "none";
+
+        //隱藏第2層
+    }
+
+    function my5ca() {
+        document.all.P6.style.display = "inline";
+
+        //顯示第3層
+    }
+
+    function my6ca() {
+        document.all.P6.style.display = "none";
+
+        //隱藏第3層
+    }
+</script>
+</body>
+</html>
